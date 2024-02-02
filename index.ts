@@ -54,7 +54,7 @@ app.get("/ask", async (req, res) => {
   const response = await axios.request(config);
 
   res.json({
-    text: response.data.candidates?.[0]?.contents?.parts?.[0]?.text,
+    text: response.data.candidates?.[0]?.content?.parts?.[0]?.text,
   });
 });
 
