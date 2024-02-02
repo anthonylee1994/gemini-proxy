@@ -1,7 +1,10 @@
 import express from "express";
 import proxy from "express-http-proxy";
+import cors from "cors";
 
 const app = express();
+
+app.use(cors());
 
 // Proxy configuration
 const proxyHost = "https://generativelanguage.googleapis.com";
